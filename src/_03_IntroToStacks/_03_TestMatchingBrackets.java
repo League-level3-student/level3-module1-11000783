@@ -3,6 +3,7 @@ package _03_IntroToStacks;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Iterator;
 import java.util.Stack;
 
 import org.junit.Test;
@@ -22,7 +23,9 @@ public class _03_TestMatchingBrackets {
 	private boolean doBracketsMatch(String brackets) {
 		
 		//1. Use a for loop to iterate through your brackets String 
-
+for (int i = 0; i < array.length; i++) {
+	
+}
     			//2.  If the current character is an '{'
 
         			//3.  Push an '{' onto the stack 
