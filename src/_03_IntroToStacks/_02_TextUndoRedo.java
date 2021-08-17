@@ -1,5 +1,12 @@
 package _03_IntroToStacks;
 
+import java.awt.RenderingHints.Key;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 public class _02_TextUndoRedo {
 	/* 
 	 * Create a JFrame with a JPanel and a JLabel.
@@ -13,6 +20,8 @@ public class _02_TextUndoRedo {
 	 * off the Stack and added back to the JLabel.
 	 * 
 	 * */
-	
-	
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+	JLabel label = new JLabel();
+
 }
