@@ -12,16 +12,18 @@ import javax.swing.JPanel;
 
 public class HangMan implements KeyListener {
 	Stack<String> words = new Stack<String>();
+	String secretWord;
+	String underscores;
 
 	public static void main(String[] args) {
-
+		String underscores = "";
+		String secretWord = Utilities.readRandomLineFromFile("dictionary.txt");
 		String numberofWords = JOptionPane.showInputDialog(null, "Pick a number between 1 and 10");
 		int number = Integer.parseInt(numberofWords);
-		String secretWord = Utilities.readRandomLineFromFile("dictionary.txt");
 		for (int i = 0; i < number; i++) {
 			words.push(secretWord);
 		}
-		
+	
 		
 		new HangMan().run(); 
 	}
@@ -41,6 +43,7 @@ public class HangMan implements KeyListener {
 		panel.add(wordbank);
 		
 		}
+
 	}
 	
 	@Override
@@ -53,12 +56,11 @@ public class HangMan implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
-		main.secretWord();
 		e.getKeyChar();
 
 		keyPressed(e);
 		for (int i = 0; i < secretWord.length(); i++) {
-		String key = secretWord.charAt(i);
+		String key = secretWord.charAt(i)+"";
 		}
 	}
 	@Override
