@@ -1,12 +1,16 @@
 package _05_String_Integer_Pair;
 
+import java.util.ArrayList;
+
 public class StringIntegerPair {
 	//1. create a private array of Strings called keys. Don't initialize it.
-
-	//2. create a private array of integers called values.
+	ArrayList<String> keys = new ArrayList<String>();
 	
+	//2. create a private array of integers called values.
+	ArrayList<Integer> values = new ArrayList<Integer>();
 	StringIntegerPair(){
 		//3. initialize both member arrays to a length of 0
+
 	}
 	
 	// 4. Complete the steps in the put method
@@ -14,7 +18,13 @@ public class StringIntegerPair {
 		//A. iterate through the keys. If you find a key that matches
 		//   the passed in String, set the value at that location to the
 		//   passed in value and return from the method.
-		
+		for (int j = 0; j < key.length(); j++) {
+			char letter = key.charAt(j);
+			if (letter == key.charAt(j)) {
+			
+			}
+			
+		}	
 		//B. create a String array that is one element longer than the keys
 		
 		//C. create an integer array that is one element longer than values
