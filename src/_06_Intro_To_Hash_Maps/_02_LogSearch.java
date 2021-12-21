@@ -14,9 +14,12 @@ public class _02_LogSearch implements ActionListener {
 	JButton button1;
 	JButton button2;
 	JButton button3; 
+	int IDnumber;
+	String name;
+	
 	HashMap<Integer, String> IDinput = new HashMap<Integer, String>();
 
-}
+
   /* 
 	 * Crate a HashMap of Integers for the keys and Strings for the values.
 	 * Create a GUI with three buttons. 
@@ -70,16 +73,31 @@ button3.addActionListener(this);
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		//how to change e to a variable that will equal a JButton
-		if (e = button1) {
+		if (e.getSource() == button1) {
 			String ID =	JOptionPane.showInputDialog(null, "Enter an ID number");
 			int IDnumber = Integer.parseInt(ID);
-			String name =	JOptionPane.showInputDialog(null, "Enter an ID number");
-			IDinput.put(IDnumber, ID);
+			String name =	JOptionPane.showInputDialog(null, "Enter an ID name");
+			IDinput.put(IDnumber, name);
 		}
 	
-if ( e = button2) {
-	
+if ( e.getSource() == button2) {
+	String ID2 =	JOptionPane.showInputDialog(null, "Enter an ID number");
+	int IDguess = Integer.parseInt(ID2);
+if (IDguess == IDnumber) {
+	System.out.println(IDinput.get(IDnumber));
 }
-	
+else {
+	System.out.println("input does not exsist");
 }
+}
+	if (e.getSource() == button3) {
+	for(Integer IDoutputnumber : IDinput.keySet()) {
+		String name = IDinput.get(IDoutputnumber);
+		System.out.println("ID: " + IDoutputnumber + " Name: " + name);
+
 	}
+
+	}
+}
+	
+}
